@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>projeto integrador 1 - Dashboard CEUB</title>
+    <title>Projeto Integrador 1 - Dashboard CEUB</title>
     
     <!-- Tailwind CSS (Estilos) -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -70,7 +70,7 @@
           </div>
         );
 
-        const ProgressBarDark = ({ label, percentage, color = "bg-[#00d8ff]" }) => (
+        const ProgressBarDark = ({ label, percentage, color = "bg-[#7c3aed]" }) => (
           <div className="mb-5">
             <div className="flex justify-between mb-2">
               <span className="text-sm font-medium text-slate-300">{label}</span>
@@ -89,7 +89,7 @@
             <div className="flex justify-between items-center mb-6">
               <h3 className="text-sm font-semibold text-white">Procura (Clientes) vs Oferta (Diaristas)</h3>
               <div className="flex space-x-4 text-xs">
-                <span className="flex items-center text-slate-400"><span className="w-2 h-2 rounded-full bg-[#00d8ff] mr-2"></span> Oferta Ociosa</span>
+                <span className="flex items-center text-slate-400"><span className="w-2 h-2 rounded-full bg-[#7c3aed] mr-2"></span> Oferta Ociosa</span>
                 <span className="flex items-center text-slate-400"><span className="w-2 h-2 rounded-full bg-[#d926a9] mr-2"></span> Procura Reprimida</span>
               </div>
             </div>
@@ -97,7 +97,7 @@
             <div className="flex-1 w-full h-48 relative">
               <svg viewBox="0 0 500 150" className="w-full h-full overflow-visible" preserveAspectRatio="none">
                 <defs>
-                  <filter id="glowCyan" x="-20%" y="-20%" width="140%" height="140%">
+                  <filter id="glowPurple" x="-20%" y="-20%" width="140%" height="140%">
                     <feGaussianBlur stdDeviation="3" result="blur" />
                     <feMerge>
                       <feMergeNode in="blur" />
@@ -117,10 +117,10 @@
                   <line key={y} x1="0" y1={y} x2="500" y2={y} stroke="#222222" strokeWidth="1" />
                 ))}
 
-                <path d="M0,100 C50,120 100,50 150,70 C200,90 250,110 300,50 C350,-10 400,80 450,60 C480,40 500,80 500,80" fill="none" stroke="#00d8ff" strokeWidth="3" filter="url(#glowCyan)" />
+                <path d="M0,100 C50,120 100,50 150,70 C200,90 250,110 300,50 C350,-10 400,80 450,60 C480,40 500,80 500,80" fill="none" stroke="#7c3aed" strokeWidth="3" filter="url(#glowPurple)" />
                 <path d="M0,130 C60,90 120,130 180,90 C240,50 280,100 340,60 C400,20 440,110 500,70" fill="none" stroke="#d926a9" strokeWidth="3" strokeDasharray="5,5" filter="url(#glowMagenta)" />
 
-                <circle cx="300" cy="50" r="5" fill="#00d8ff" className="animate-pulse" />
+                <circle cx="300" cy="50" r="5" fill="#7c3aed" className="animate-pulse" />
                 <rect x="270" y="15" width="60" height="20" rx="4" fill="#d926a9" />
                 <text x="300" y="29" fill="white" fontSize="10" textAnchor="middle" fontWeight="bold">Max - 78%</text>
               </svg>
@@ -167,7 +167,7 @@
                 { day: 'Apps', h: '10%' }, { day: 'Outros', h: '30%' }
               ].map((item, i) => (
                 <div key={i} className="flex flex-col items-center justify-end z-10 w-full h-full">
-                  <div className="w-full max-w-[32px] rounded-t-md bg-gradient-to-t from-[#00d8ff]/20 to-[#00d8ff] mb-2" style={{ height: item.h }}></div>
+                  <div className="w-full max-w-[32px] rounded-t-md bg-gradient-to-t from-[#7c3aed]/20 to-[#7c3aed] mb-2" style={{ height: item.h }}></div>
                   <span className="text-[10px] text-slate-400 shrink-0">{item.day}</span>
                 </div>
               ))}
@@ -180,10 +180,10 @@
             <h3 className="text-sm font-semibold text-white mb-4 shrink-0">Nuvem de Palavras: A Dor (Problema)</h3>
             <div className="flex-1 flex flex-wrap gap-x-3 gap-y-2 justify-center items-center content-center p-2">
               <span className="text-2xl lg:text-3xl text-[#d926a9] font-black drop-shadow-[0_0_8px_rgba(217,38,169,0.5)] text-center whitespace-nowrap">Confiança</span>
-              <span className="text-xl lg:text-2xl text-[#00d8ff] font-bold text-center whitespace-nowrap">Desmarcação</span>
+              <span className="text-xl lg:text-2xl text-[#7c3aed] font-bold text-center whitespace-nowrap">Desmarcação</span>
               <span className="text-lg lg:text-xl text-purple-400 font-semibold text-center whitespace-nowrap">Calote</span>
               <span className="text-base lg:text-lg text-slate-300 text-center whitespace-nowrap">Segurança</span>
-              <span className="text-lg lg:text-xl text-blue-400 font-bold drop-shadow-[0_0_5px_rgba(0,216,255,0.4)] text-center whitespace-nowrap">Preço Injusto</span>
+              <span className="text-lg lg:text-xl text-violet-400 font-bold drop-shadow-[0_0_5px_rgba(124,58,237,0.4)] text-center whitespace-nowrap">Preço Injusto</span>
               <span className="text-sm lg:text-base text-slate-400 text-center whitespace-nowrap">Pessoas Estranhas</span>
               <span className="text-base lg:text-lg text-[#d926a9] font-semibold opacity-80 text-center whitespace-nowrap">Atraso</span>
               <span className="text-sm lg:text-base text-emerald-400 font-medium text-center whitespace-nowrap">Antecedentes</span>
@@ -271,7 +271,7 @@
                   <ul className="space-y-2.5">
                     {teamMembers.map((member, i) => (
                       <li key={i} className="text-xs text-slate-400 flex items-center hover:text-slate-200 transition-colors cursor-default">
-                        <span className={`w-1.5 h-1.5 rounded-full mr-3 shrink-0 ${i === 0 ? 'bg-[#d926a9]' : 'bg-[#00d8ff]'}`}></span>
+                        <span className={`w-1.5 h-1.5 rounded-full mr-3 shrink-0 ${i === 0 ? 'bg-[#d926a9]' : 'bg-[#7c3aed]'}`}></span>
                         {member}
                       </li>
                     ))}
@@ -284,7 +284,7 @@
                 <header className="px-8 py-6 flex justify-between items-center z-10 border-b border-[#111111]">
                   <div>
                     <h2 className="text-2xl font-bold text-white tracking-tight">{activeItem.label}</h2>
-                    <p className="text-sm text-slate-400 mt-1">Validação analítica da Gig Economy de Limpeza Doméstica.</p>
+                    <p className="text-sm text-slate-400 mt-1">Validação analítica do projeto integrador de Limpeza Doméstica.</p>
                   </div>
                   <div className="flex items-center space-x-4">
                     <div className="hidden md:flex items-center space-x-2 bg-[#111111] px-4 py-2 rounded-full border border-[#222222]">
@@ -304,10 +304,10 @@
                           <GradientCard title="Dificuldade de Contratação" value="78" subtitle="%" gradient="bg-gradient-to-br from-[#d926a9] to-[#8a2be2]"/>
                         </div>
                         <div className="lg:col-span-3">
-                          <GradientCard title="Profissionais Ociosas" value="62" subtitle="%" gradient="bg-gradient-to-br from-[#00d8ff] to-[#007acc]"/>
+                          <GradientCard title="Profissionais Ociosas" value="62" subtitle="%" gradient="bg-gradient-to-br from-[#7c3aed] to-[#4c1d95]"/>
                         </div>
                         <div className="lg:col-span-6 grid grid-cols-2 gap-4">
-                           <StatPill icon={MessageSquare} label="Respostas Formulário" value="104" trendColor="text-[#00d8ff]" />
+                           <StatPill icon={MessageSquare} label="Respostas Formulário" value="104" trendColor="text-[#7c3aed]" />
                            <StatPill icon={AlertTriangle} label="Taxa de Cancelamento" value="85%" trendColor="text-[#d926a9]" />
                            <StatPill icon={ShieldCheck} label="Foco de Atuação" value="ODS 8" trendColor="text-emerald-400" />
                            <StatPill icon={Users} label="Dependência Indicação" value="75%" trendColor="text-purple-400" />
@@ -320,7 +320,7 @@
                       </div>
 
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <DonutChart title="Dificuldade Última Hora" percentage="78%" colorPrimary="#00d8ff" colorSecondary="#1a1a1a" label1="Difícil / Muito Difícil (78%)" label2="Neutro / Fácil (22%)" strokeArray="196 251"/>
+                        <DonutChart title="Dificuldade Última Hora" percentage="78%" colorPrimary="#7c3aed" colorSecondary="#1a1a1a" label1="Difícil / Muito Difícil (78%)" label2="Neutro / Fácil (22%)" strokeArray="196 251"/>
                         <DonutChart title="ODS 8: Formalização (MEI)" percentage="82%" colorPrimary="#d926a9" colorSecondary="#2d0b26" label1="Alta Precarização (Sem MEI) (82%)" label2="Formalizadas (18%)" strokeArray="205 251"/>
                         <div className="h-64 md:h-full"><GradientBarChart /></div>
                       </div>
@@ -332,13 +332,13 @@
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                       <div className="bg-[#111111] p-6 rounded-2xl border border-[#222222]">
                         <h3 className="text-lg font-bold text-white mb-6 border-b border-[#222222] pb-3">Canais de Aquisição (Onde encontram trabalho?)</h3>
-                        <ProgressBarDark label="Indicação de patroas/clientes atuais" percentage={75} color="bg-[#00d8ff]" />
-                        <ProgressBarDark label="Grupos de Facebook/WhatsApp" percentage={45} color="bg-[#00d8ff]" />
+                        <ProgressBarDark label="Indicação de patroas/clientes atuais" percentage={75} color="bg-[#7c3aed]" />
+                        <ProgressBarDark label="Grupos de Facebook/WhatsApp" percentage={45} color="bg-[#7c3aed]" />
                         <ProgressBarDark label="Agências de limpeza" percentage={15} color="bg-[#d926a9]" />
                         <ProgressBarDark label="Aplicações de telemóvel" percentage={8} color="bg-slate-500" />
                       </div>
                       <div className="flex flex-col gap-6">
-                        <div className="h-40"><GradientCard title="Dias Livres Semanais (Ociosidade)" value="62" subtitle="% queriam estar a trabalhar" gradient="bg-gradient-to-br from-[#00d8ff] to-[#007acc]"/></div>
+                        <div className="h-40"><GradientCard title="Dias Livres Semanais (Ociosidade)" value="62" subtitle="% queriam estar a trabalhar" gradient="bg-gradient-to-br from-[#7c3aed] to-[#4c1d95]"/></div>
                         <div className="bg-[#111111] p-6 rounded-2xl border border-[#222222] flex-1">
                           <h3 className="text-sm font-bold text-white mb-4">Prejuízo Invisível</h3>
                           <div className="flex items-center p-4 bg-[#000000] rounded-xl border border-rose-900/50">
@@ -362,7 +362,7 @@
                          <h3 className="text-sm font-bold text-white mb-4">Comportamento de Procura</h3>
                          <div className="space-y-4">
                             <div className="flex items-center p-3 bg-[#000000] rounded-lg">
-                              <CheckCircle2 className="text-[#00d8ff] mr-3" size={20} />
+                              <CheckCircle2 className="text-[#7c3aed] mr-3" size={20} />
                               <span className="text-sm text-slate-300">Maioria procura serviços <strong className="text-white">Quinzenalmente</strong>.</span>
                             </div>
                             <div className="flex items-center p-3 bg-[#000000] rounded-lg">
@@ -376,7 +376,7 @@
                        <h3 className="text-lg font-bold text-white mb-6 border-b border-[#222222] pb-3">Critérios de Decisão (O que gera valor)</h3>
                        <ProgressBarDark label="Avaliações/Recomendações de outros" percentage={88} color="bg-[#d926a9]" />
                        <ProgressBarDark label="Verificação de antecedentes criminais" percentage={65} color="bg-[#d926a9]" />
-                       <ProgressBarDark label="Preço cobrado" percentage={42} color="bg-[#00d8ff]" />
+                       <ProgressBarDark label="Preço cobrado" percentage={42} color="bg-[#7c3aed]" />
                        <ProgressBarDark label="Agilidade para conseguir alguém rápido" percentage={35} color="bg-slate-500" />
                        <p className="text-xs text-slate-400 mt-6 italic">* A Confiança supera amplamente o fator "Preço" na hora da contratação.</p>
                      </div>
@@ -441,7 +441,7 @@
                           <h3 className="text-xl font-bold text-white mb-6 border-b border-[#222222] pb-4">As Maiores Fricções do Mercado</h3>
                           <ul className="space-y-6">
                             <li className="flex items-start">
-                              <div className="bg-[#00d8ff]/20 p-2 rounded-lg mr-4 shrink-0"><Home className="text-[#00d8ff]" size={20}/></div>
+                              <div className="bg-[#7c3aed]/20 p-2 rounded-lg mr-4 shrink-0"><Home className="text-[#7c3aed]" size={20}/></div>
                               <div>
                                 <strong className="text-white block mb-1">Contratantes (Clientes):</strong>
                                 <span className="text-slate-400 text-sm">Medo de abrir a porta a pessoas estranhas sem verificação prévia ou antecedentes criminais. Insegurança quanto à qualidade do serviço.</span>
